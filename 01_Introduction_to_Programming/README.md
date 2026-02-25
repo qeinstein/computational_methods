@@ -1,6 +1,6 @@
 # 01 - Introduction to Programming
 
-This module covers the fundamental concepts of Python programming, object-oriented design, and data visualization. It serves as a foundation for all computational methods covered in later sections.
+This module covers the fundamental concepts of Python programming, object-oriented design, and data visualization. It should serve as a foundation for all computational methods covered in later sections.
 
 ## Topics Covered
 
@@ -33,27 +33,6 @@ This module covers the fundamental concepts of Python programming, object-orient
 - **03_visualization.md**: Data visualization techniques and applications
 - **03_visualization.py**: Matplotlib examples and plotting functions
 
-## How to Use
-
-1. Start with **01_python_basics.md** to refresh your Python knowledge
-2. Review **02_oop.md** to understand object design principles
-3. Learn visualization with **03_visualization.md**
-4. Run the `.py` files to see implementations in action
-5. Modify examples to experiment and deepen understanding
-
-## Key Learning Outcomes
-
-By the end of this module, you should be able to:
-- Write clean, efficient Python code
-- Design and implement classes and objects
-- Create publication-quality visualizations
-- Understand fundamental programming paradigms
-- Read and contribute to Python projects
-
-## Prerequisites
-
-- No prior programming experience required
-- Basic mathematical knowledge helpful but not essential
 
 ## Next Steps
 
