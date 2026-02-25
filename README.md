@@ -1,6 +1,6 @@
-# Computational Methods Course Repository
+# CSC205 Course Repository
 
-Comprehensive resource for CSC205 - Computational Methods at the University of Lagos
+Resource for CSC205(uniLAG)
 
 ## Overview
 This repository contains explanations, implementations, and examples for all major topics in computational methods. Each topic is organized with both theoretical explanations (markdown files) and practical implementations (Python files).
@@ -94,15 +94,14 @@ computational_methods/
 
 ---
 
-## How to Use This Repository
+## Usage
 
 1. **For Learning**: Start with the markdown files (`.md`) in each folder for theory, then review the Python files (`.py`) for implementation
 2. **For Reference**: Each `.py` file contains documented functions with examples
-3. **Progressive Learning**: Topics are ordered from fundamentals to advanced concepts
 
 ---
 
-## Recommended Learning Path
+## Recommendation
 
 1. Start with **01 - Introduction to Programming** (refresh Python skills)
 2. Move to **02 - Computing Fundamentals** (understand errors and debugging)
@@ -113,6 +112,7 @@ computational_methods/
 
 ## Contributors
 
+- Fluxx
 - Created for CSC205 Computational Methods Course
 
 ---
