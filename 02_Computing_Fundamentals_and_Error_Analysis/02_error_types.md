@@ -2,8 +2,8 @@
 
 In numerical computation, errors arise from many sources. Understanding them helps design stable algorithms.
 
-- **Absolute error**: \( |x_{true} - x_{approx}| \)
-- **Relative error**: \( \frac{|x_{true} - x_{approx}|}{|x_{true}|} \) when \(x_{true}\neq0\).
+- **Absolute error**: $|x_{\text{true}} - x_{\text{approx}}|$
+- **Relative error**: $\frac{|x_{\text{true}} - x_{\text{approx}}|}{|x_{\text{true}}|}$ when $x_{\text{true}}\neq0$.
 - **Round-off error**: due to representing numbers with finite precision (floating-point rounding).
 - **Truncation error**: from approximating an infinite process by a finite one (e.g., Taylor series, numerical derivatives).
 - **Propagation of error**: errors can amplify when performing arithmetic; e.g.
@@ -19,6 +19,6 @@ In numerical computation, errors arise from many sources. Understanding them hel
 
 ### Exercises
 
-1. Compute absolute and relative errors for approximations of \(\pi\).
-2. Write function to propagate error through simple formula like \(f(x,y)=x+y\).
+1. Compute absolute and relative errors for approximations of $\pi$.
+2. Write function to propagate error through simple formula like $f(x,y)=x+y$.
 

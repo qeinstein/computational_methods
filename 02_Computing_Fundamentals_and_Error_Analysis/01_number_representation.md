@@ -4,7 +4,7 @@ Computers store numbers using binary (base‑2) internally. Key concepts:
 
 - **Binary, decimal, hexadecimal** systems and conversions.
 - **Floating-point representation** follows IEEE 754 standard with sign bit, exponent, and mantissa (also called significand).
-- A real number is stored roughly as \( (-1)^{sign} \times 1.mantissa \times 2^{exponent-bias}\).
+- A real number is stored roughly as $(-1)^{\text{sign}} \times 1.\text{mantissa} \times 2^{\text{exponent}-\text{bias}}$.
 - **Machine epsilon**: the smallest difference between 1 and the next representable float.
 - **Precision limitations** cause round-off and truncation errors.
 
