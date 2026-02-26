@@ -59,4 +59,4 @@ examples showing how to call it and verify the residual `f(root)`.
 - It is robust but not the fastest method; after bracketing a root, faster
   methods (e.g., Newton or secant) can be used if derivatives or better
   convergence are desired.
-- If you still don't understand, study is again from the perspective of binary search(BS)
+- If you still don't understand, study it again from the perspective of binary search(BS)

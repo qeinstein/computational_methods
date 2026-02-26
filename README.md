@@ -99,6 +99,23 @@ computational_methods/
 1. **For Learning**: Start with the markdown files (`.md`) in each folder for theory, then review the Python files (`.py`) for implementation
 2. **For Reference**: Each `.py` file contains documented functions with examples
 
+### Setting up a virtual environment (Linux)
+
+Follow these commands to create and activate a Python virtual environment and install dependencies:
+
+```bash
+python3 -m venv venv | python -m venv venv
+source venv/bin/activate
+pip install --upgrade pip
+pip install -r requirements.txt
+```
+
+When finished, deactivate the environment with:
+
+```bash
+deactivate
+```
+
 ---
 
 ## Recommendation

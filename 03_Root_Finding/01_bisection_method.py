@@ -1,79 +1,40 @@
-# """Bisection method implementation and examples.
-#
-# Provides a robust iterative `my_bisection` function with input validation,
-# stopping criteria, and a maximum iteration guard.
-# """
+# Program a function my_bisection(f,a,b,tol) that approximates a root r of f, bounded
+# by a and b, to within a tolerance tol. The function should return the approximation r.
 
 import numpy as np
 
+def my_bisection(f, a, b, tol):
+    # approximates a root, R, of f bounded
+    # by a and b, to within a tolerance tol
+    # | f(m) | < tol with m being the midpoint of a and b
+    # btw a an b, Recursive function
 
-def my_bisection(f, a, b, tol=1e-8, max_iter=1000, return_iters=False):
-    """Find a root of f in [a,b] using the bisection method.
+    # first check if a and b bound a root
+    if np.sign(f(a)) == np.sign(f(b)):
+        raise Exception("f(a) and f(b) must have opposite signs")
 
-    Parameters
-    ----------
-    f : callable
-        Function of a single variable.
-    a, b : float
-        Interval endpoints. Requires f(a) and f(b) to have opposite signs.
-    tol : float
-        Tolerance for stopping. Stops when |f(m)| <= tol or interval half-width
-        (b-a)/2 <= tol.
-    max_iter : int
-        Maximum number of iterations.
-    return_iters : bool
-        If True, return a tuple (root, iterations).
+    # getting our midpoint
+    mid = (a + b) / 2
 
-    Returns
-    -------
-    root : float
-        Approximate root.
-    (root, iterations) : tuple
-        If return_iters is True.
-
-    Raises
-    ------
-    ValueError if f(a) and f(b) do not have opposite signs, or RuntimeError
-    if the method fails to converge within max_iter.
-    """
-
-    fa = f(a)
-    fb = f(b)
-    if fa == 0:
-        return (a, 0) if return_iters else a
-    if fb == 0:
-        return (b, 0) if return_iters else b
-    if np.sign(fa) == np.sign(fb):
-        raise ValueError("f(a) and f(b) must have opposite signs (a bracket is required)")
-
-    for k in range(1, max_iter + 1):
-        m = (a + b) / 2.0
-        fm = f(m)
-
-        # stopping criteria: small residual or small interval
-        if abs(fm) <= tol or (b - a) / 2.0 <= tol:
-            return (m, k) if return_iters else m
-
-        # decide which subinterval contains the root
-        if np.sign(fa) == np.sign(fm):
-            a = m
-            fa = fm
-        else:
-            b = m
-            fb = fm
-
-    raise RuntimeError(f"Bisection did not converge after {max_iter} iterations")
+    # check if the midpoint is a root or if we are within the tolerance
+    if np.abs(f(mid)) < tol:
+        return mid
+    elif np.sign(f(a)) == np.sign(f(mid)):
+        # if f(a) and f(mid) have the same sign, the root is in the right half
+        return my_bisection(f, mid, b, tol)
+    else:
+        # if f(b) and f(mid) have the same sign, the root is in the left half
+        return my_bisection(f, a, mid, tol)
 
 
-if __name__ == "__main__":
-    # Example: root of x^2 - 2 is sqrt(2) ~ 1.41421356
-    f = lambda x: x ** 2 - 2
+# Example usage
+f = lambda x: x**2 - 2  # f(x) = x^2 - 2, root is sqrt(2)
 
-    root, iters = my_bisection(f, 0.0, 2.0, tol=1e-6, max_iter=100, return_iters=True)
-    print(f"Approximate root (tol=1e-6): {root} after {iters} iterations")
-    print("Residual f(root):", f(root))
+r1 = my_bisection(f, 0, 2, 0.1) # using a and b of same sign will raise an exception, since it does not bound a root
+print(f"Approximate root with tol=0.1: {r1}")
 
-    # demonstrate different tolerance
-    r2 = my_bisection(f, 0.0, 2.0, tol=1e-2)
-    print(f"Approximate root (tol=1e-2): {r2}")
-    print("Residual f(r2):", f(r2))
+r01 = my_bisection(f, 0, 2, 0.01)
+print(f"Approximate root with tol=0.01: {r01}")
+
+print("f(r1) =", f(r1))
+print("f(r01) =", f(r01)) # should be close to 0, within the specified tolerances
