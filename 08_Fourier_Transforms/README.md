@@ -36,24 +36,6 @@ This module covers Fourier analysis - a powerful technique for transforming sign
 5. Visualize magnitude and phase spectra
 6. Understand aliasing and windowing
 
-## Key Learning Outcomes
-
-By the end of this module, you should be able to:
-- Understand time and frequency domain representations
-- Implement and apply discrete Fourier transforms
-- Understand FFT algorithms and their efficiency
-- Analyze signals in frequency domain
-- Detect frequencies in complex signals
-- Apply windowing for spectral analysis
-- Use FFT for signal processing and filtering
-- Understand Nyquist theorem and sampling
-
-## Prerequisites
-
-- Python fundamentals (Module 01)
-- Complex numbers and trigonometry
-- Calculus basics
-- Linear algebra concepts (Module 09 helpful)
 
 ## Applications
 
@@ -73,12 +55,6 @@ By the end of this module, you should be able to:
 - **Power spectrum**: Energy analysis
 - **Wavelets**: Time-frequency localization
 
-## Advanced Topics
-
-- Wavelet transforms
-- Short-time Fourier transform (STFT)
-- 2D and 3D transforms for image processing
-- Parallel FFT algorithms
 
 ## Next Steps
 

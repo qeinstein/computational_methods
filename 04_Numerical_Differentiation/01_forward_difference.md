@@ -15,6 +15,13 @@ $$
 f'(x) \approx \frac{f(x+h)-f(x)}{h} + O(h).
 $$
 
+```text
+       f(x)        f(x+h)
+    ----o-----------o---->
+        x          x+h
+        |--- h ----|
+```
+
 This approximation has truncation error proportional to $h$ (first order).
 
 ## Higher-order forward formula (three-point)

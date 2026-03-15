@@ -13,10 +13,12 @@ $$
 Plugging this into the Newton update yields the secant update:
 
 $$
-x_{n+1} = x_n - f(x_n)\\frac{x_n - x_{n-1}}{f(x_n)-f(x_{n-1})}.
+x_{n+1} = x_n - f(x_n)\frac{x_n - x_{n-1}}{f(x_n)-f(x_{n-1})}.
 $$
 
 This uses two starting guesses $x_0$ and $x_1$ and requires only evaluations of $f$, not $f'$.
+
+![Secant Method Flowchart](https://kroki.io/graphviz/svg/eNptULFOwzAQ_ZVTpgbFou1IMQxQIRYWYECIwamvTVRjW2cXGSH-nYtL0oYy-OQ7v3vP7-l2Q8o3cAdfQMpudUvy6XYB1mmE19Aoj7J2qYIQPw1KcjurUb8t4DEqij0CjWl9QB7fW7_jsVE1Glnk7gLWFaQpn1kF0ZmCYTcNrrYDTNVhsp6kWSm4TssSLgF9uC5YNdPrVr0726k-e60iDotpDpJpQUBeP-MimOB8xJb1nP1A2qAeaaa5YBir8a_-U1sSORo2cseolTOOJOUUllafZrCPRlz9hsGXbLd3zf2Y-AXDIRN-_WPywRUH5x1Z7-XYVkdq9Qnl8fs48z3r9w8wNKVN)
 
 ## Algorithm (step-by-step)
 

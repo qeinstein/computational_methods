@@ -16,6 +16,8 @@ $$I \approx \frac{h}{2} \left[ f(x_0) + 2\sum_{i=1}^{n-1} f(x_i) + f(x_n) \right
 
 where $x_i = a + i \cdot h$ for $i = 0, 1, \dots, n$.
 
+![Trapezoidal Rule Flowchart](https://kroki.io/graphviz/svg/eNplT02rwjAQvPsrFk-2WkSvJZ4qInjy4_R4h5SsJhg3IU1BEf-7Gz_q43kaMjOZmVXmEKTXsIArBElHZYLYViWQUwg_jZYeRe3OI2jixaIIriWF6reETZQhvh1orfENMr0kw6yVNVrR1yBgUBcyG1Nv0574tR_IDIYMddZn98o537kN6xOIDqiYJHHnlYzYySlgKGAKeUrhEJPrR8gam9Z-SpcUkW-ynJa-5KDH02Sbk_qe-7yimD13Mz4WMb7KX0zZ8f_KKkf4ZwMbuKaE2x25PWul)
+
 ## Error Analysis
 
 The truncation error for the composite trapezoidal rule is given by:

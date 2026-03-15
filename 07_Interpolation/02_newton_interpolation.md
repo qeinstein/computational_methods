@@ -1,71 +1,26 @@
-# Newton Forward and Backward Interpolation
+# Newton's Divided Difference Interpolation
 
-This document describes Newton's forward and backward interpolation formulas for equally spaced data, how they are derived from forward differences, and how to use them in practice. The companion implementation is provided in `07_Interpolation/02_newton_interpolation.py`.
+Newton's interpolation is a method of finding the unique polynomial of degree $n-1$ that passes through $n$ data points. It uses "divided differences" to build the polynomial incrementally.
 
-## Overview
+## The Newton Form
 
-- Forward/backward interpolation are polynomial interpolation techniques that are especially convenient when the data points are equally spaced with spacing $h$.
-- They build the interpolating polynomial using forward differences $\Delta y_i = y_{i+1}-y_i$, $\Delta^2 y_i$, etc., rather than solving a Vandermonde system.
+The interpolating polynomial is written as:
+$$P_n(x) = a_0 + a_1(x-x_0) + a_2(x-x_0)(x-x_1) + \dots + a_n(x-x_0)\dots(x-x_{n-1})$$
 
-## Notation
+The coefficients $a_i$ are the divided differences.
 
-- Data: $(x_0, y_0), (x_1, y_1), \dots, (x_n, y_n)$ with $x_i = x_0 + i h$ (uniform spacing $h$).
-- Let $s = \dfrac{x - x_0}{h}$ (a normalized offset for forward interpolation) and for backward interpolation we often use $s = \dfrac{x - x_n}{h}$.
+## Divided Differences Table
 
-## Forward difference table
+The divided differences are defined recursively:
+- Zeroth divided difference: $f[x_i] = y_i$
+- First divided difference: $f[x_i, x_{i+1}] = \frac{f[x_{i+1}] - f[x_i]}{x_{i+1} - x_i}$
+- Higher orders: $f[x_0, \dots, x_k] = \frac{f[x_1, \dots, x_k] - f[x_0, \dots, x_{k-1}]}{x_k - x_0}$
 
+## Advantages
 
-Construct the forward difference table starting from the original $y$ values. In display math form:
+- **Incremental:** If you add a new data point, you only need to calculate one more coefficient ($a_{n+1}$). In contrast, Lagrange interpolation requires recalculating everything.
+- **Efficiency:** The nested form (Horner's method) allows for fast evaluation of the polynomial.
 
-$$
-\begin{array}{cccc}
-y_0 & y_1 & y_2 & \dots \\
-\Delta y_0 & \Delta y_1 & \dots & \\
-\Delta^2 y_0 & \dots & & \\
-\vdots & & &
-\end{array}
-$$
+## Example Usage
 
-Compute differences column by column: $\Delta y_i = y_{i+1}-y_i$, $\Delta^2 y_i = \Delta(\Delta y_i)$, and so on. The coefficients for Newton forward polynomial are the top elements of each column: $y_0, \Delta y_0, \Delta^2 y_0, ...$.
-
-## Newton forward interpolation formula
-
-For $x$ near $x_0$ define $s = \dfrac{x-x_0}{h}$. The Newton forward interpolating polynomial is:
-
-$$
-P_f(x) = y_0 + s\Delta y_0 + \frac{s(s-1)}{2!}\Delta^2 y_0 + \frac{s(s-1)(s-2)}{3!}\Delta^3 y_0 + \cdots
-$$
-
-The general term uses falling factorials $s^{(k)} = s(s-1)\cdots(s-k+1)$ divided by $k!$.
-
-## Newton backward interpolation formula
-
-For $x$ near $x_n$ define $s = \dfrac{x-x_n}{h}$ (note $s$ may be negative). The Newton backward polynomial uses backward differences (or equivalently the forward differences taken from the end):
-
-$$
-P_b(x) = y_n + s\nabla y_n + \frac{s(s+1)}{2!}\nabla^2 y_n + \frac{s(s+1)(s+2)}{3!}\nabla^3 y_n + \cdots
-$$
-
-where $\nabla y_n = y_n - y_{n-1}$ and higher backward differences are defined similarly.
-
-## When to use forward vs backward
-
-- Use forward when $x$ is close to the beginning of the data ($x_0$).
-- Use backward when $x$ is close to the end of the data ($x_n$).
-
-## Practical steps to interpolate
-
-1. Ensure nodes are equally spaced. If not, use other interpolation methods (Lagrange, Newton divided differences).
-2. Build the forward difference table.
-3. Choose forward or backward formula based on where $x$ is located relative to the data.
-4. Evaluate the polynomial using the stored differences and the falling (or rising) factorial terms.
-
-## Error and degree
-
-- The interpolation polynomial of degree $m$ will exactly match the data for polynomials of degree $\le m$. The remainder term involves the $(m+1)$-th derivative of the true underlying function and the product $(x-x_0)(x-x_1)\cdots(x-x_m)$ scaled by $(m+1)!$.
-
-## Example and implementation
-
-See `07_Interpolation/02_newton_interpolation.py` for a detailed, well-commented implementation with examples and helper functions to build difference tables.
-
-#### This is fully the courtesy of gpt, not me.
+Implementation and the divided difference table logic are in `02_newton_interpolation.py`.

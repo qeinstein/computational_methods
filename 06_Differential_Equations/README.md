@@ -45,24 +45,6 @@ This module covers numerical methods for solving ordinary differential equations
 5. Visualize solutions and compare methods
 6. Experiment with different step sizes
 
-## Key Learning Outcomes
-
-By the end of this module, you should be able to:
-- Implement Euler, Heun, and Runge-Kutta methods
-- Solve initial value problems numerically
-- Understand order of accuracy and convergence
-- Analyze stability of numerical methods
-- Select appropriate methods for different problems
-- Solve systems of ODEs
-- Apply numerical ODE solving to real-world problems
-
-## Prerequisites
-
-- Python fundamentals (Module 01)
-- Error analysis (Module 02)
-- Calculus (ODEs, derivatives, Taylor series)
-- Numerical differentiation concepts (Module 04)
-- Numerical integration concepts (Module 05)
 
 ## Applications
 

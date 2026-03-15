@@ -1,6 +1,6 @@
 # 05 - Numerical Integration
 
-This module covers techniques for numerically approximating integrals. Integration is vital in engineering, physics, and applied mathematics where analytical solutions are unavailable.
+This module covers techniques for numerically approximating integrals.
 
 ## Topics Covered
 
@@ -58,13 +58,6 @@ By the end of this module, you should be able to:
 - Physics problems (work, center of mass, moment of inertia)
 - Probability and statistics
 - Signal processing
-
-## Advanced Topics
-
-For more advanced integration methods, see:
-- Gaussian quadrature
-- Adaptive quadrature
-- Monte Carlo integration
 
 ## Next Steps
 

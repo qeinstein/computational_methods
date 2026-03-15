@@ -19,6 +19,8 @@ $$
 
 Geometrically, this finds the x-intercept of the tangent line to $f$ at $x_n$.
 
+![Newton-Raphson Flowchart](https://kroki.io/graphviz/svg/eNptkEFPwzAMhf-K1dMmtYIzI3CACXHhAhwQQiidvbVaSCKngyDEf8dJabcyDpFi5_m9fMZ2w9o3cANfwNpusWX1cL0A65DgOTTak6pdLCF0n4YUu51FwpcF3Heau0FBxrQ-kLRvrd9J2-iajCpydQbrElBOPC2hc6YQ2VVDq-0o03WY4XoW53M4B_LhspC8bIytfnM25T161B2NI_HV0gcoiFBBmjzJ89na2XfiDeHEvtdXEFOEfOK_iCWz43EqV6JaOeNYcYZeWjxG7jdRXfyyyyXTDZBST42fKOxXIK9_yO5cscdNZgPPIVoytXhkefg-XXHv-v0DOvejDQ==)
+
 ## Algorithm (pseudocode)
 
 1. Choose an initial guess $x_0$.

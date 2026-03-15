@@ -21,6 +21,8 @@ $$I \approx \frac{h}{3} \left[ f(x_0) + 4\sum_{i \in \text{odd}} f(x_i) + 2\sum_
 - **$i \in \text{even}$:** These are the internal points with even indices ($2, 4, 6, \dots, n-2$). These points get a multiplier of **2**.
 - **$x_0, x_n$:** The boundary points have a multiplier of **1**.
 
+![Simpson's 1/3 Rule Flowchart](https://kroki.io/graphviz/svg/eNplkEFLw0AQhe_-iiGnpDWU1t7CKkJFAqJgvYh42DBTs7jdDbsbqIj_3dmkSWo9LW_eY-d7g-rDyaaGe_gGJ80nKideNgUYiwRvvpYNicoeLsGHL03C2dYg4XsB2yBdGBKktWo88bg0iqdaVqRFUoOAtMpltjAX23bPapfKDOb8VFnC6QdrmzGt2F9CsGDyZTRL_4R44ioPFvEmYZZuKSq5tyay3CKux2BcNBewnu3Sg-q2sL06t1eT_Uy-1RN0aQLxTTTTxOwM6sVVjN0Z_F-3v0J-3ffmt2sUdYQfOrD-g_hKfirYmxPgo02GSsf_jg1GNew4A99YQyd9OMDIBfz8AoPNlcE=)
+
 ## Simpson's 3/8 Rule
 
 Simpson's 3/8 rule approximates the function with a cubic polynomial. It uses four points over three sub-intervals. It is generally used when the number of sub-intervals $n$ is a **multiple of 3**.

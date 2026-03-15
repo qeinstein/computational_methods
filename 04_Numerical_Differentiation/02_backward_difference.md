@@ -15,6 +15,13 @@ $$
 f'(x) \approx \frac{f(x) - f(x-h)}{h} + O(h).
 $$
 
+```text
+      f(x-h)       f(x)
+    ----o-----------o---->
+       x-h          x
+       |--- h ----|
+```
+
 ## Higher-order backward formula (three-point)
 
 A second-order backward approximation is:

@@ -17,6 +17,8 @@ the open interval `(a, b)`.
   that half: if `f(a)` and `f(m)` have the same sign, the root lies in `(m,b)`;
   otherwise it lies in `(a,m)`.
 
+![Bisection Method Flowchart](https://kroki.io/graphviz/svg/eNptkM1OwzAQhF9llZMDQSCOFIMoVIgDXAoHhDjYtZNYdezIThEI8e5snDg_bW-ZndlZ5xOqcKwu4RF-wTGzFcrR14cFGCskfPiS1ZJy-52Bb360pM7ujJDicwHrhrkmJqTWqvYSx0-m3uFYMy41TYK6gjwDlgHPoLE6wdB9KTfbIZQTlp7khKdwDRe3CZ4KnUKxypr21LMSQ7gCCoSd8vT8MjRZ8yVdIccA457kpErbNjx3rG-tCjPkPQrSPiEFSqFXuH5s8a0WrJF34y18TJUMxnIweDRWzlk3jIPC3o3V1lEXOK6MOKTYwT276XHiR0AWyaGeMnmXfqSK3vzoi016hm1N5DVF166Yw7qpP0PWNYYRWvtQ-vW5vdxbjkvdn4wAo_77B6wh1G8=)
+
 Each iteration halves the search interval, so the method converges linearly
 and is guaranteed to find a root for continuous functions when a bracketing
 interval is provided.

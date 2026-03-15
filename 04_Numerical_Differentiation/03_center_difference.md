@@ -10,6 +10,13 @@ $$
 f'(x) \approx \frac{f(x+h)-f(x-h)}{2h} + O(h^2).
 $$
 
+```text
+      f(x-h)       f(x)       f(x+h)
+    ----o-----------o-----------o---->
+       x-h          x          x+h
+       |--- h ----|--- h ----|
+```
+
 This is second-order accurate: truncation error scales like $h^2$.
 
 ## Second derivative (central)
