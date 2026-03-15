@@ -26,6 +26,17 @@ where $\xi$ is some value in the interval $(a, b)$. This indicates that the trap
 1.  **Exact** for linear functions (where $f''(x) = 0$).
 2.  **Second-order accurate** with respect to the step size $h$ (error decreases by a factor of 4 when $h$ is halved).
 
+## Step Size ($h$) and Accuracy
+
+The step size $h = \frac{b - a}{n}$ is the most critical parameter in numerical integration. It represents the width of each trapezoid.
+
+### The Accuracy Trade-off
+1.  **Truncation Error:** As $h$ decreases (by increasing $n$), the straight-line approximation fits the curve better, reducing the theoretical error. For the Trapezoidal rule, halving the step size ($h/2$) reduces the error by a factor of 4 ($O(h^2)$).
+2.  **Rounding Error:** If $h$ is made extremely small (e.g., $n = 10^8$), the computer may encounter floating-point rounding errors because it is summing millions of tiny values.
+3.  **Computational Cost:** A smaller $h$ requires more function evaluations, making the calculation slower.
+
+In practice, we choose $n$ to be large enough to reach the desired precision (e.g., $10^{-6}$), but not so large that it slows down the system or introduces significant rounding noise.
+
 ## Practical Considerations
 
 - **Simplicity:** It is one of the easiest numerical integration methods to implement.
